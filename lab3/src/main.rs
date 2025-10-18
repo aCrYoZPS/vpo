@@ -2,7 +2,9 @@ mod task1;
 mod task2;
 mod task3;
 mod task4;
-use std::io;
+mod task5;
+mod task6;
+use std::{fs, io};
 
 fn first_task() {
     println!("{}", task1::generate_output());
@@ -102,6 +104,82 @@ fn third_task() {
     )
 }
 
+fn fourth_task() {
+    let rows: u8;
+    loop {
+        println!("Input discretion level (0 - 255):");
+        match task4::input_u8() {
+            Ok(r) => {
+                rows = r;
+                break;
+            }
+            Err(err) => {
+                eprintln!("{}", err);
+            }
+        };
+    }
+
+    let file_path = "table.html";
+    match fs::write(file_path, task4::generate_html_file(rows, 3)) {
+        Ok(_) => (),
+        Err(err) => eprintln!("{}", err),
+    }
+}
+
+fn fifth_task() {
+    let dir_path: std::path::PathBuf;
+    loop {
+        println!("Input directory path:");
+        match task5::input_path() {
+            Ok(path) => {
+                dir_path = path;
+                break;
+            }
+            Err(err) => eprintln!("{}", err),
+        };
+    }
+
+    println!("Input extension: ");
+    let mut input_buffer: String = String::new();
+    match io::stdin().read_line(&mut input_buffer) {
+        Ok(_) => (),
+        Err(error) => {
+            eprintln!("Error reading from stdin: {}", error);
+            return;
+        }
+    }
+
+    let files = task5::get_all_files_with_extension(dir_path, &input_buffer.trim().to_string());
+    for file in files {
+        println!("{}", file.display());
+    }
+}
+
+fn sixth_task() {
+    println!("Input url: ");
+    let mut input_buffer: String = String::new();
+    match io::stdin().read_line(&mut input_buffer) {
+        Ok(_) => (),
+        Err(error) => {
+            eprintln!("Error reading from stdin: {}", error);
+            return;
+        }
+    }
+
+    let bytes = match task6::get_file_content(&input_buffer.trim().to_string()) {
+        Ok(bytes) => bytes,
+        Err(err) => {
+            eprintln!("{}", err);
+            return;
+        }
+    };
+
+    match task6::create_file(&bytes) {
+        Ok(_) => println!("Content saved to file response.txt"),
+        Err(err) => eprintln!("{}", err),
+    }
+}
+
 fn main() {
     loop {
         println!("Enter task number, -1 to exit");
@@ -119,9 +197,9 @@ fn main() {
                 1 => first_task(),
                 2 => second_task(),
                 3 => third_task(),
-                4 => println!("{}", task1::generate_output()),
-                5 => println!("{}", task1::generate_output()),
-                6 => println!("{}", task1::generate_output()),
+                4 => fourth_task(),
+                5 => fifth_task(),
+                6 => sixth_task(),
                 _ => {
                     println!("Invalid task number");
                 }

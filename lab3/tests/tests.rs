@@ -145,3 +145,83 @@ mod task_3_tests {
         );
     }
 }
+
+#[cfg(test)]
+mod task_4_tests {
+    use lab3::task4;
+
+    #[test]
+    fn test_first_white() {
+        assert_eq!(task4::generate_gray(0, 100), 255);
+    }
+
+    #[test]
+    fn test_last_black() {
+        assert_eq!(task4::generate_gray(100, 100), 0);
+    }
+}
+
+#[cfg(test)]
+mod task_5_tests {
+    use lab3::task5::*;
+    use std::path;
+
+    #[test]
+    fn test_correct_reading() {
+        assert_eq!(
+            get_all_files_with_extension(
+                path::PathBuf::from("/home/acryoz/vpo/lab3/src/task5"),
+                &"rs".to_string()
+            )
+            .into_iter()
+            .map(|path| String::from(path.to_str().unwrap()))
+            .collect::<Vec<String>>(),
+            vec!["/home/acryoz/vpo/lab3/src/task5/mod.rs"]
+        );
+    }
+
+    #[test]
+    fn test_nonexistent_path() {
+        let nonexistent_path = String::from("C:\\Users\\aCrYoZ");
+        assert!(parse_path(&nonexistent_path).is_err_and(|err| err
+            == format!(
+                "Error: Specified path ({}) does not exist",
+                nonexistent_path
+            )))
+    }
+}
+
+#[cfg(test)]
+mod task_6_tests {
+    use lab3::task6::*;
+
+    #[test]
+    fn test_correct_read() {
+        let localhost_file = String::from("http://localhost:8000/file_test.txt");
+        assert!(get_file_content(&localhost_file).is_ok());
+        assert_eq!(
+            get_file_content(&localhost_file).unwrap(),
+            vec![65, 66, 67, 68, 69, 70, 10]
+        );
+    }
+
+    #[test]
+    fn test_404() {
+        let localhost_file = String::from("http://localhost:8000/file_text.txt");
+        assert!(get_file_content(&localhost_file).is_err());
+        assert_eq!(
+            get_file_content(&localhost_file).unwrap_err(),
+            "Failed to get file from url http://localhost:8000/file_text.txt with status code 404 Not Found"
+        );
+    }
+
+    #[test]
+    fn test_wrong_url() {
+        let localhost_file = String::from("http://lhost:8000/file_text.txt");
+        assert!(get_file_content(&localhost_file).is_err());
+        assert_eq!(
+            get_file_content(&localhost_file).unwrap_err(),
+            "Failed to get response from http://lhost:8000/file_text.txt with error: error sending request for url (http://lhost:8000/file_text.txt)"
+        );
+    }
+}
