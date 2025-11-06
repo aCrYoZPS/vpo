@@ -1,0 +1,560 @@
+{
+  "id": "2a826e59-56c1-45f5-8a47-3f40bfd62b43",
+  "version": "3.0",
+  "name": "vpo5",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "da18f476-1830-4d7a-a29e-2e574c0810e8",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "c0d08662-52a2-4b9f-8111-fcf9fa5a08cc"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "c0d08662-52a2-4b9f-8111-fcf9fa5a08cc",
+      "name": "New Test",
+      "commands": [
+        {
+          "id": "419a4970-5954-4525-a86e-7acc9432b20b",
+          "command": "open",
+          "target": "https://onliner.by/",
+          "value": "",
+          "isBreakpoint": false
+        }
+      ]
+    },
+    {
+      "id": "1e69fdd8-f7e1-4cde-81b7-9f473083bb18",
+      "name": "links_work",
+      "commands": [
+        {
+          "id": "3e62e888-7ac6-4c0a-aae9-8d9ca5baee4f",
+          "command": "open",
+          "target": "https://onliner.by",
+          "value": "",
+          "comment": ""
+        },
+        {
+          "command": "click",
+          "target": "linkText=«Дочь пропала из школы, нашлась в реанимации — а виновных нет?»",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9d7403d3-3777-49a3-b575-7e73c703aa81",
+          "targets": [
+            [
+              "linkText=«Дочь пропала из школы, нашлась в реанимации — а виновных нет?»",
+              "linkText"
+            ],
+            [
+              "css=#widget-1-1 .b-tile-main",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='widget-1-1']/div/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'https://people.onliner.by/2025/11/06/iz-prodlenki-i-v-dtp')])[3]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'«Дочь пропала из школы, нашлась в реанимации — а виновных нет?»')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertTitle",
+          "target": "Девочка ушла из продленки и попала в ДТП",
+          "value": "",
+          "id": "710ec0d2-229a-45d6-9a08-96e3991e6728"
+        }
+      ]
+    },
+    {
+      "id": "240383d8-b43e-4e0c-8e6c-77481014f471",
+      "name": "register_creds",
+      "commands": [
+        {
+          "id": "4ff38196-685d-437e-b647-8c34707709a0",
+          "command": "open",
+          "target": "https://www.onliner.by/",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-bar__item--text",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "e379678e-2b55-473a-ad9d-cc6b6c3da57d",
+          "targets": [
+            [
+              "css=.auth-bar__item--text",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='userbar']/div[2]/div/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "458c5898-3530-4565-9d25-b05588623210",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "acryoz@bk.ru",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "136be0f9-e79e-4edf-8d47-1edb891bf504",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "b00aea18-6b97-48c7-a3d2-583eb6cbdb61",
+          "targets": [
+            [
+              "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+          "value": "10Ftp8uyt",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "78c9d68c-8892-45d2-ae66-e0893cdb3772",
+          "targets": [
+            [
+              "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-button_primary",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0436f8dd-1706-4cd8-beec-3ad613100274",
+          "targets": [
+            [
+              "css=.auth-button_primary",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='\n                Войти\n            '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Войти')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8e4d94e6-b378-4c55-bc5e-c09ddc5c6fed",
+      "name": "login_wrong_creds",
+      "commands": [
+        {
+          "command": "open",
+          "target": "https://www.onliner.by/",
+          "value": "",
+          "id": "dcd80fa8-53c2-4b10-8d05-8596142d5753"
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-bar__item--text",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "36698547-970b-49b8-9a7b-f52060cc30c7",
+          "targets": [
+            [
+              "css=.auth-bar__item--text",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='userbar']/div[2]/div/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "203cd215-114f-4b1c-b7f5-388aaca1bec6",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "acryoz",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "469b9c65-573a-4bd3-91cb-bef7735c9a1c",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "acryoz@bk.ru",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "id": "0bfcf77f-0a62-494f-bb5c-44747d142c7b"
+        },
+        {
+          "command": "click",
+          "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "id": "2a7b4574-3ec8-4681-91fc-8ebb841419c8"
+        },
+        {
+          "command": "type",
+          "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+          "value": "фвыафвыа",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "id": "f4d73885-d3fd-4c60-8a6a-40699b30fbc6"
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-button_primary",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "75987f26-f802-4f85-8948-844927e0e2e8",
+          "targets": [
+            [
+              "css=.auth-button_primary",
+              "css:finder"
+            ],
+            [
+              "xpath=(//button[@type='submit' and text()='\n                Войти\n            '])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[3]/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Войти')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementPresent",
+          "target": "css=.auth-form__description_error",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "88c57860-1a42-499b-8e84-61662ec4eff7",
+          "targets": [
+            [
+              "css=.auth-form__description_error",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[3]/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5aebd6f0-9c1e-4a65-a71a-1264354a3526",
+      "name": "writable_fields",
+      "commands": [
+        {
+          "command": "open",
+          "target": "https://www.onliner.by/",
+          "value": "",
+          "id": "153e5853-973b-424f-99fa-8fd0f1a8f7c7",
+          "isBreakpoint": false
+        },
+        {
+          "command": "click",
+          "target": "css=.auth-bar__item--text",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "1d12fd9d-ea7a-4d6a-8a70-a753bde9e48b",
+          "targets": [
+            [
+              "css=.auth-bar__item--text",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='userbar']/div[2]/div/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementEditable",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "584ad0bb-12ad-49b9-b461-96089400c36a",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "adsf",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0f7fb888-450f-4cb6-9721-8459586d6650",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "3271ff69-e2d3-4955-8dbe-d0ebc507f12a",
+          "targets": [
+            [
+              "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='password'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "waitForText",
+          "target": "css=.auth-form__group > .auth-form__row .auth-input",
+          "value": "adsf",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "css=.auth-form__group > .auth-form__row .auth-input",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@type='text'])[2]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "id": "7c3d529c-4ad2-44f3-979d-954d415a9ab9"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
