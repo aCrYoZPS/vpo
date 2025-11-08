@@ -1,0 +1,406 @@
+{
+  "id": "2a826e59-56c1-45f5-8a47-3f40bfd62b43",
+  "version": "3.0",
+  "name": "vpo5",
+  "url": "http://www.google.com",
+  "tests": [{
+    "id": "c0d08662-52a2-4b9f-8111-fcf9fa5a08cc",
+    "name": "New Test",
+    "commands": [{
+      "id": "419a4970-5954-4525-a86e-7acc9432b20b",
+      "comment": "",
+      "command": "open",
+      "target": "https://onliner.by/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1e69fdd8-f7e1-4cde-81b7-9f473083bb18",
+    "name": "links_work",
+    "commands": [{
+      "id": "3e62e888-7ac6-4c0a-aae9-8d9ca5baee4f",
+      "comment": "",
+      "command": "open",
+      "target": "https://onliner.by",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d7403d3-3777-49a3-b575-7e73c703aa81",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=«Дочь пропала из школы, нашлась в реанимации — а виновных нет?»",
+      "targets": [
+        ["linkText=«Дочь пропала из школы, нашлась в реанимации — а виновных нет?»", "linkText"],
+        ["css=#widget-1-1 .b-tile-main", "css:finder"],
+        ["xpath=(//div[@id='widget-1-1']/div/a)[1]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://people.onliner.by/2025/11/06/iz-prodlenki-i-v-dtp')])[3]", "xpath:href"],
+        ["xpath=//a[contains(.,'«Дочь пропала из школы, нашлась в реанимации — а виновных нет?»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "710ec0d2-229a-45d6-9a08-96e3991e6728",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Девочка ушла из продленки и попала в ДТП",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "240383d8-b43e-4e0c-8e6c-77481014f471",
+    "name": "register_creds",
+    "commands": [{
+      "id": "4ff38196-685d-437e-b647-8c34707709a0",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.onliner.by/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e379678e-2b55-473a-ad9d-cc6b6c3da57d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-bar__item--text",
+      "targets": [
+        ["css=.auth-bar__item--text", "css:finder"],
+        ["xpath=(//div[@id='userbar']/div[2]/div/div/div)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "458c5898-3530-4565-9d25-b05588623210",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "136be0f9-e79e-4edf-8d47-1edb891bf504",
+      "comment": "",
+      "command": "type",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": "acryoz@bk.ru"
+    }, {
+      "id": "b00aea18-6b97-48c7-a3d2-583eb6cbdb61",
+      "comment": "",
+      "command": "click",
+      "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+      "targets": [
+        ["css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input", "css:finder"],
+        ["xpath=(//input[@type='password'])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "78c9d68c-8892-45d2-ae66-e0893cdb3772",
+      "comment": "",
+      "command": "type",
+      "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+      "targets": [
+        ["css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input", "css:finder"],
+        ["xpath=(//input[@type='password'])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": "10Ftp8uyt"
+    }, {
+      "id": "0436f8dd-1706-4cd8-beec-3ad613100274",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-button_primary",
+      "targets": [
+        ["css=.auth-button_primary", "css:finder"],
+        ["xpath=(//button[@type='submit' and text()='\n                Войти\n            '])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[3]/button)[1]", "xpath:idRelative"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8e4d94e6-b378-4c55-bc5e-c09ddc5c6fed",
+    "name": "login_wrong_creds",
+    "commands": [{
+      "id": "dcd80fa8-53c2-4b10-8d05-8596142d5753",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.onliner.by/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36698547-970b-49b8-9a7b-f52060cc30c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-bar__item--text",
+      "targets": [
+        ["css=.auth-bar__item--text", "css:finder"],
+        ["xpath=(//div[@id='userbar']/div[2]/div/div/div)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "203cd215-114f-4b1c-b7f5-388aaca1bec6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "469b9c65-573a-4bd3-91cb-bef7735c9a1c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": "acryoz"
+    }, {
+      "id": "0bfcf77f-0a62-494f-bb5c-44747d142c7b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": "acryoz@bk.ru"
+    }, {
+      "id": "2a7b4574-3ec8-4681-91fc-8ebb841419c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+      "targets": [
+        ["css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input", "css:finder"],
+        ["xpath=(//input[@type='password'])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4d73885-d3fd-4c60-8a6a-40699b30fbc6",
+      "comment": "",
+      "command": "type",
+      "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+      "targets": [
+        ["css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input", "css:finder"],
+        ["xpath=(//input[@type='password'])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": "фвыафвыа"
+    }, {
+      "id": "75987f26-f802-4f85-8948-844927e0e2e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-button_primary",
+      "targets": [
+        ["css=.auth-button_primary", "css:finder"],
+        ["xpath=(//button[@type='submit' and text()='\n                Войти\n            '])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[3]/button)[1]", "xpath:idRelative"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88c57860-1a42-499b-8e84-61662ec4eff7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.auth-form__description_error",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "5aebd6f0-9c1e-4a65-a71a-1264354a3526",
+    "name": "writable_fields",
+    "commands": [{
+      "id": "153e5853-973b-424f-99fa-8fd0f1a8f7c7",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.onliner.by/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d12fd9d-ea7a-4d6a-8a70-a753bde9e48b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-bar__item--text",
+      "targets": [
+        ["css=.auth-bar__item--text", "css:finder"],
+        ["xpath=(//div[@id='userbar']/div[2]/div/div/div)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "584ad0bb-12ad-49b9-b461-96089400c36a",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "0f7fb888-450f-4cb6-9721-8459586d6650",
+      "comment": "",
+      "command": "type",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [
+        ["css=.auth-form__group > .auth-form__row .auth-input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div/div/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": "adsf"
+    }, {
+      "id": "3271ff69-e2d3-4955-8dbe-d0ebc507f12a",
+      "comment": "",
+      "command": "click",
+      "target": "css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input",
+      "targets": [
+        ["css=form > .auth-form__row > .auth-form__group > .auth-form__field .auth-input", "css:finder"],
+        ["xpath=(//input[@type='password'])[1]", "xpath:attributes"],
+        ["xpath=(//div[@id='auth-container']/div/div[2]/div/form/div[2]/div/div/div/div/input)[1]", "xpath:idRelative"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c3d529c-4ad2-44f3-979d-954d415a9ab9",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.auth-form__group > .auth-form__row .auth-input",
+      "targets": [],
+      "value": "adsf"
+    }]
+  }, {
+    "id": "51cbcc0d-a320-4c53-a384-107ac8030311",
+    "name": "test_main_page",
+    "commands": [{
+      "id": "3bd7b557-813d-4ad0-af6d-2f4235f8b8c3",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.onliner.by/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef06b52d-5569-4381-886b-c7a267bce3f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.onliner_logo",
+      "targets": [
+        ["css=.onliner_logo", "css:finder"],
+        ["xpath=//img[@alt='Onlíner']", "xpath:img"],
+        ["xpath=//div[@id='container']/div/div/header/div[3]/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a89e90be-d8ba-4e98-848d-356acbb325fc",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Onlíner",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "89ebc59b-2c04-4caa-a4f2-f557dd25d4b9",
+    "name": "no_res_on_empty_search",
+    "commands": [{
+      "id": "de737a7b-e668-40af-9f35-780f43170f70",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.onliner.by/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9f7d5cd-7c9f-4515-978c-91d18806724a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1320x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "386caddc-082a-4608-8057-90429418a4af",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,714)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ccdfd0c-1142-4a7c-9a4e-7652da9d736e",
+      "comment": "",
+      "command": "click",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.fast-search__input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='fast-search']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "282d3d1d-3dc4-4076-8c0a-5efa08fcd406",
+      "comment": "",
+      "command": "type",
+      "target": "name=query",
+      "targets": [
+        ["name=query", "name"],
+        ["css=.fast-search__input", "css:finder"],
+        ["xpath=//input[@name='query']", "xpath:attributes"],
+        ["xpath=//div[@id='fast-search']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "dcf0078d-8f80-4510-ac48-26971e32524d",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "f865128a-7d25-4496-9dfd-2b2a6512bd45",
+      "comment": "",
+      "command": "type",
+      "target": "css=.search__input",
+      "targets": [
+        ["css=.search__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='search-page']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4adc4b1-2c73-4d74-a9cb-59e31d84de06",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@id='search-page']/div[2]/li",
+      "targets": [
+        ["css=.search__content-wrapper", "css:finder"],
+        ["xpath=//div[@id='search-page']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "undefined"
+    }]
+  }],
+  "suites": [{
+    "id": "da18f476-1830-4d7a-a29e-2e574c0810e8",
+    "name": "New Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 30000,
+    "tests": ["c0d08662-52a2-4b9f-8111-fcf9fa5a08cc"]
+  }],
+  "urls": ["http://www.google.com/"],
+  "plugins": []
+}
